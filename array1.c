@@ -7,8 +7,9 @@
 
 int main()
 {
-	int num[5] = { 300, 20, 75, -40, 130 };   //배열변수(열이 집합)
-	int i;
+	int num[5] = { 300, 20, 75, -40, 730 };   //배열변수(열의 집합)
+	int i, sum = 0, max, min;
+	float avg;
 
 	printf("%d, %d \n", sizeof(num), sizeof(num[0]));  
 	                    //전체크기            //[] : 첨자(subscript)
@@ -26,9 +27,26 @@ int main()
 
 
 	for (i = 0; i < 5; i++)
+		sum += num[i];
+	avg = (float)sum / 5;
+
+
+	max = min = num[0];
+	for (i = 0; i < 5; i++)
+	{
+		if (max < num[i])   //최댓값
+			max = num[i];
+
+		if (min > num[i])   //최솟값
+			min = num[i];
+	}
+
+
+	for (i = 0; i < 5; i++)
 		printf("%d, ", num[i]);
 	printf("\n");
+	printf("합: %d, 평균: %.2f \n", sum, avg);
+	printf("max: %d, min: %d \n", max, min);
 
-	
 	return 0;
 }
