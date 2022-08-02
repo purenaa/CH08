@@ -9,7 +9,7 @@ int main()
 	printf("s1: %s s2: %s \n", s1, s2);
 	printf("%d, %d \n", sizeof(s1), strlen(s1));
 
-	strcpy(s2, s1);       //문자열 처리함수이기 때문에 문자열만 가능하고 정수형 배열은 불가능하다.
+	strcpy(s2, s1);       //문자열 처리함수이기 때문에 문자열만 가능하고 정수형 배열은 불가능하다.	//실인수
 	printf("s1: %s s2: %s \n", s1, s2);
 
 	printf("input s1 ? ");  //dom
